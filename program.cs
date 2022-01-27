@@ -433,8 +433,8 @@ namespace BeginnerFundamentals // Note: actual namespace depends on the project 
 
 
             //Practice Debug
-            //var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
-            //var smallests = GetSmallests(numbers, 3);
+            var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+            var smallests = GetSmallests(numbers, 3);
 
             //foreach (var number in smallests)
             //    Console.WriteLine(number);
