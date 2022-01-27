@@ -390,8 +390,60 @@ namespace BeginnerFundamentals // Note: actual namespace depends on the project 
             var fileInfo = new FileInfo(path);
             fileInfo.CopyTo(content);
 
+            //if you want to delete file 
+            fileInfo.Delete();
+
+            //to check if the file exist
+            if (fileInfo.Exists)
+            {
+                //
+            }
+
+            fileInfo.OpenRead();
+
+            /*
+            So if you want to execute a small number of operations against a specific file it's more convenient
+
+            to use these static methods so you're going to have to create a new file in file object.
+
+            But with this static method every time we call them the operating system does some security checking
+
+            and that can affect the performance of re - application.
+
+            */
 
 
+
+            //What is Directory?
+            //The only thing I want to show you in this lecture is the difference between directory and directories. Just exactly like fileInfo and file
+
+            //Directory.CreateDirectory(@"c:\temp\folder1");
+            //If you want to use directory to get the file 
+            //So this method returns all files in the current directory and it's up directories.
+            //var files = Directory.GetFiles(@"c:\projects\BeginnerFundamentals", "*.*", SearchOption.AllDirectories);
+            //foreach (var file in files) ;
+            //Console.WriteLine(files);
+
+            //var directories = Directory.GetDirectories(@"c:\projects\BeginnerFundamentals", "*.*", SearchOption.AllDirectories)
+            //    foreach (var directory in directories)
+            //        Console.WriteLine(directory);
+
+
+            // Google search FileInfo class c# and follow Microsoft documentation. You'll get more examples. You can easily figure it out on your own. 
+
+
+            //Practice Debug
+            //var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+            //var smallests = GetSmallests(numbers, 3);
+
+            //foreach (var number in smallests)
+            //    Console.WriteLine(number);
+
+
+            //One thing that distinguishes a good programmer from an average one is that a good programmer often thinks of cases.
+            //What they mean when each case is uncommon scenarios an average programmer often assumes the end user
+            //enters values into the forms the way the programmer expects but the reality is different.
+            //So back in the example from The Last Lecture look at the first line here we have a list of six numbers
 
 
 
