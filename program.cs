@@ -450,7 +450,114 @@ namespace BeginnerFundamentals // Note: actual namespace depends on the project 
 
 
 
+            //String
 
+            var fullName = "Kay Thao ";
+            Console.WriteLine("Trim: '{0}'", fullName.Trim());
+            Console.WriteLine("ToUpper: '{0}'", fullName.Trim().ToUpper());
+
+            //IndexOf
+            var index = fullName.IndexOf(' ');
+            var firstName = fullName.Substring(0, index);
+            var lastName = fullName.Substring(index + 1);
+            Console.WriteLine("FirstName: " + firstName);
+            Console.WriteLine("LastName: " + lastName);
+
+            //Split
+            var names = fullName.Split(' ');
+            Console.WriteLine("FirstName: " + names[0]);
+            Console.WriteLine("LastName: " + names[1]);
+
+            //Replace
+            Console.WriteLine(fullName.Replace("Kay", "Kayfegh"));
+
+            //first method microsoft put in to .net
+            if (String.IsNullOrEmpty(null))
+                Console.WriteLine("Invalid");
+
+            if (String.IsNullOrEmpty(""))
+                Console.WriteLine("Invalid");
+
+            if (String.IsNullOrEmpty(" ".Trim()))
+                Console.WriteLine("Invalid");
+
+            var str = "25";
+            var age = Convert.ToByte(str);
+            Console.WriteLine(age);
+
+            //number convert to string
+            //$ sign
+            //price = 29.95f;
+            //Console.WriteLine(price.ToString("C0"));
+
+            //Live Coding: Summarising Text
+            //The first thing we want to do here is to check if the length of the sentence is below the threshold. If that's the case we simply display it.
+            //Otherwise we need to summarize it. So if sentence length is less than 20 just an arbitrary number we simply displayed it. Otherwise we need to summarize the text.
+
+            var sentence = "This is going to be a really really really long text.";
+            var summary = StringUtility.SummarizeText(sentence, 25);
+            Console.WriteLine(summary);
+
+            const int maxLength = 20;
+
+            //if (sentence.Length < maxLength)
+            //{
+            //    Console.WriteLine(sentence);
+            //}
+            //else
+            //{
+            //to count a number of words that roughly fits around 20 characters. How do we do that?
+            //string arrays of words
+            //for each word 
+            //var words = sentence.Split(' ');
+            //var totalCharacters = 0;
+            //var summaryWords = new List<string>();
+
+            //foreach (var word in words)
+            //{
+            //    summaryWords.Add(word);
+
+            //    totalCharacters += word.Length + 1;
+            //    if (totalCharacters > maxLength)
+            //        break;
+            //}
+
+
+            //in the summary what we need to do is to create a string and join all these words using whitespace. How do we do that.
+            //The string class has a method called join the first argument is a separator.
+            //So the use of whitespace.
+
+
+            //Join() method
+
+            //var summary = String.Join(" ", summaryWords) + "...";
+            //Console.WriteLine(summary);
+
+            var builder = new StringBuilder("Hello World");
+
+            builder
+                .Append('-', 10)
+                .AppendLine()
+                .Append("Header")
+                .AppendLine()
+                .Replace('-', '+')
+                .Remove(0, 10)
+                .Insert(0, new String('-', 10));
+
+            Console.WriteLine(builder);
+
+            Console.WriteLine("First Char: " + builder[0]);
+
+            //var name = "Mosh";
+
+            //name.ToUpper();
+            //Console.WriteLine(name);
+
+            //var builder = new StringBuilder("Mosh");
+
+            //var index = builder.IndexOf('M')
+
+            //Console.WriteLine(index);
 
 
 
